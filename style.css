@@ -1,0 +1,103 @@
+.first-face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-face,.third-face {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 匹配同类型中的第2个同级兄弟元素 */
+.second-face .dot:nth-of-type(2) {
+    align-self: flex-end;
+    /* 属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性 */
+}
+
+.third-face .dot:nth-of-type(2) {
+    align-self: center;
+}
+
+.third-face .dot:nth-of-type(3) {
+    align-self: flex-end;
+}
+
+.fourth-face, .sixth-face {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fourth-face .column, .sixth-face .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fifth-face {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fifth-face .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fifth-face .column:nth-of-type(2) {
+    justify-content: center;
+}
+
+/* OTHER STYLES */
+* {
+    box-sizing: border-box;
+}
+/* html和body标签的高度是由子级元素堆砌撑起来的。去掉这一句，div只占用它本身需要的高度 */
+html, body {
+    height: 100%;
+}
+
+/* 六个骰子在页面中也是弹性布局 */
+body {
+    display: flex;
+    align-items: center;
+    /*项目在交叉轴上的对齐方式*/
+    justify-content: center;
+    /*项目在主轴上的对齐方式*/
+    flex-wrap: wrap;
+    /*换行，第一行在上方。*/
+    /*多根轴线的对齐方式。如果项目有换行，整体仍在居中*/
+    align-content: center;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(top, #222, #333);
+}
+
+/* 属性选择器，匹配class属性以face结尾的元素 */
+[class$="face"] {
+    margin: 16px;
+    padding: 4px;
+    background-color: #e7e7e7;
+    width: 104px;
+    height: 104px;
+    box-shadow:
+        /* inset将默认的外部阴影变为内部 */
+        /* h-shadow v-shadow blur spread color inset;后面4个为可选 */
+        /* 用逗号隔开表示添加多个阴影 */
+        inset 0 5px white,
+        /*放大可以看出端倪*/
+        inset 0 -5px #bbb,
+        inset 5px 0 #d7d7d7,
+        inset -5px 0 #d7d7d7;
+    border-radius: 10%;
+}
+
+.dot {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin: 4px;
+    background-color: #333;
+    /* 使用阴影做出点数深刻的元素 */
+    box-shadow: inset 0 3px #111, inset 0 -3px #555;
+}
