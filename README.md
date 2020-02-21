@@ -7,3 +7,5 @@
 👉 [阮一峰的网络日志--Flex 布局教程：实例篇](http://www.ruanyifeng.com/blog/2015/07/flex-examples.html)
 
 👉 [阮一峰CodePen源码](https://codepen.io/LandonSchropp/pen/KpzzGo)
+
+![骰子效果图](dice.jpg)
