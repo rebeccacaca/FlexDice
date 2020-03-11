@@ -8,4 +8,4 @@
 
 👉 [阮一峰CodePen源码](https://codepen.io/LandonSchropp/pen/KpzzGo)
 
-![骰子效果图](dice.jpg)
+![骰子效果图](https://github.com/rebeccacaca/FlexDice/blob/master/dice.jpg)
